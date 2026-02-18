@@ -1,236 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nikesh Reddy | Engineering Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikesh Reddy | Engineering Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a;
-            color: white;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 50px;
-            background-color: #1e293b;
-            position: sticky;
-            top: 0;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        nav h2 {
-            margin: 0;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b0f19;
+    color: white;
+    overflow-x: hidden;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 60px;
+    background: rgba(11,15,25,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+nav h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
 
-        header {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 300;
+    transition: 0.3s;
+}
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+nav a:hover {
+    color: #00d4ff;
+}
 
-        header p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-        }
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
 
-        section {
-            padding: 60px 10%;
-        }
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
 
-        h2 {
-            border-left: 5px solid #38bdf8;
-            padding-left: 10px;
-        }
+.hero span {
+    color: #00d4ff;
+}
 
-        .about {
-            line-height: 1.7;
-            max-width: 800px;
-        }
+.hero p {
+    margin-top: 20px;
+    max-width: 600px;
+    color: #9ca3af;
+    font-size: 1.2rem;
+}
 
-        .cad-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
+.button {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #00d4ff;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
 
-        .cad-card {
-            background-color: #1e293b;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
+.button:hover {
+    background: #00d4ff;
+    color: black;
+}
 
-        .cad-card:hover {
-            transform: scale(1.03);
-        }
+.section {
+    padding: 120px 10%;
+}
 
-        .cad-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
 
-        .cad-card div {
-            padding: 20px;
-        }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
 
-        .cad-card h3 {
-            margin-top: 0;
-        }
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
+.project img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
 
-        .skill {
-            background-color: #1e293b;
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
+.project:hover img {
+    transform: scale(1.1);
+}
 
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #1e293b;
-            color: #94a3b8;
-        }
+.project-info {
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    width: 100%;
+}
 
-        button {
-            background-color: #38bdf8;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 20px;
-        }
+.project-info h3 {
+    margin-bottom: 10px;
+}
 
-        button:hover {
-            background-color: #0ea5e9;
-        }
-    </style>
+.project-info p {
+    color: #d1d5db;
+    font-size: 0.9rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #374151;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+footer {
+    padding: 80px 10%;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-    <h2>Nikesh Reddy</h2>
+    <h2>NR</h2>
     <div>
+        <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="#cad">CAD Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
     </div>
 </nav>
 
-<header>
-    <h1>Aspiring Mechanical Engineer</h1>
-    <p>Designing practical solutions through CAD, prototyping, and innovation.</p>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <div class="about">
-        <p>
-            I am a high school engineering student passionate about mechanical design, CAD modeling,
-            and problem-solving. I specialize in creating detailed 3D models and functional prototypes
-            that solve real-world problems.
-        </p>
-
-        <p>
-            My experience includes designing mechanical assemblies, consumer product concepts,
-            and competition-based engineering solutions. I enjoy combining creativity with
-            technical precision to turn ideas into fully realized digital models.
-        </p>
-
-        <button onclick="window.location.href='#cad'">View My CAD Work</button>
-    </div>
+<section class="hero">
+    <h1>Hi, I'm <span>Nikesh Reddy</span>.<br>Mechanical Design Engineer.</h1>
+    <p>I design high-performance mechanical systems using CAD, prototyping, and engineering analysis. My focus is precision, functionality, and real-world impact.</p>
+    <a href="#projects" class="button">View My Work</a>
 </section>
 
-<section id="cad">
+<section id="projects" class="section fade-in">
     <h2>Featured CAD Projects</h2>
 
-    <div class="cad-grid">
+    <div class="projects">
 
-        <div class="cad-card">
-            <img src="https://via.placeholder.com/600x400" alt="Smart Hydration Backpack CAD">
-            <div>
-                <h3>Smart Hydration Backpack</h3>
-                <p>
-                    A modular backpack system with integrated hydration tracking.
-                    Designed using SolidWorks with full assembly constraints and exploded views.
-                </p>
-                <p><strong>Software:</strong> SolidWorks</p>
+        <div class="project">
+            <img src="https://via.placeholder.com/800x600" alt="">
+            <div class="project-info">
+                <h3>Smart Hydration System</h3>
+                <p>Fully modeled mechanical hydration tracking backpack with modular assembly. Designed in SolidWorks.</p>
             </div>
         </div>
 
-        <div class="cad-card">
-            <img src="https://via.placeholder.com/600x400" alt="Portable Charging Dock CAD">
-            <div>
-                <h3>Portable Charging Dock</h3>
-                <p>
-                    A compact, 3D-printable charging station optimized for thermal management
-                    and efficient cable routing.
-                </p>
-                <p><strong>Software:</strong> Fusion 360</p>
-            </div>
-        </div>
-
-        <div class="cad-card">
-            <img src="https://via.placeholder.com/600x400" alt="Adjustable Desk Mechanism CAD">
-            <div>
-                <h3>Adjustable Desk Mechanism</h3>
-                <p>
-                    Designed a mechanical lifting system featuring rack-and-pinion motion control.
-                    Modeled with detailed part drawings and stress considerations.
-                </p>
-                <p><strong>Software:</strong> SolidWorks</p>
-            </div>
-        </div>
-
-        <div class="cad-card">
-            <img src="https://via.placeholder.com/600x400" alt="Robotic Arm Assembly CAD">
-            <div>
+        <div class="project">
+            <img src="https://via.placeholder.com/800x600" alt="">
+            <div class="project-info">
                 <h3>Robotic Arm Assembly</h3>
-                <p>
-                    A multi-joint robotic arm with motor housing integration and range-of-motion
-                    simulation. Designed for educational robotics applications.
-                </p>
-                <p><strong>Software:</strong> Fusion 360</p>
+                <p>Multi-axis robotic arm with torque simulations and detailed part drawings. Designed in Fusion 360.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://via.placeholder.com/800x600" alt="">
+            <div class="project-info">
+                <h3>Adjustable Desk Mechanism</h3>
+                <p>Rack-and-pinion lifting mechanism with load analysis and manufacturing constraints.</p>
             </div>
         </div>
 
     </div>
 </section>
 
-<section id="skills">
-    <h2>Technical Skills</h2>
+<section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p style="max-width:700px; color:#9ca3af; line-height:1.7;">
+        I am a high school engineering student specializing in mechanical design and CAD development. 
+        I enjoy transforming complex problems into structured, efficient mechanical solutions. 
+        My work includes multi-part assemblies, 3D-printed prototypes, and functional engineering systems.
+    </p>
+</section>
 
-    <div class="skills-list">
+<section id="skills" class="section fade-in">
+    <h2>Technical Skills</h2>
+    <div class="skills">
         <div class="skill">SolidWorks</div>
         <div class="skill">Fusion 360</div>
         <div class="skill">3D Printing</div>
@@ -238,19 +245,26 @@
         <div class="skill">Engineering Drawings</div>
         <div class="skill">Prototyping</div>
         <div class="skill">Design for Manufacturing</div>
-        <div class="skill">Problem Solving</div>
+        <div class="skill">Python (Basic)</div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: nikeshreddy.engineering@gmail.com</p>
-    <p>GitHub: github.com/nikeshreddy</p>
-</section>
-
 <footer>
-    © 2026 Nikesh Reddy | Engineering Portfolio
+    © 2026 Nikesh Reddy — Engineering Portfolio
 </footer>
+
+<script>
+const elements = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        if(position < window.innerHeight - 100){
+            el.classList.add("visible");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
