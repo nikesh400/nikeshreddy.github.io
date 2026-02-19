@@ -3,268 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nikesh Reddy | Engineering Portfolio</title>
+<title>Nikesh Reddy | Mechanical Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: #0b0f19;
-    color: white;
-    overflow-x: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #0c0c0c;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 60px;
-    background: rgba(11,15,25,0.8);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
 }
 
-nav h2 {
-    font-weight: 600;
-    letter-spacing: 1px;
+nav h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 30px;
-    font-weight: 300;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #aaa;
+  margin-left: 30px;
+  font-size: 0.9rem;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: #00d4ff;
+  color: white;
 }
 
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
+  padding: 120px 0;
+  max-width: 900px;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
+.hero h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 30px;
 }
 
 .hero span {
-    color: #00d4ff;
+  color: #4f9cff;
 }
 
 .hero p {
-    margin-top: 20px;
-    max-width: 600px;
-    color: #9ca3af;
-    font-size: 1.2rem;
-}
-
-.button {
-    margin-top: 40px;
-    display: inline-block;
-    padding: 14px 28px;
-    border: 1px solid #00d4ff;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #00d4ff;
-    color: black;
+  font-size: 1.2rem;
+  color: #bbb;
+  max-width: 600px;
 }
 
 .section {
-    padding: 120px 10%;
+  padding: 140px 0;
+  border-top: 1px solid #222;
 }
 
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 60px;
 }
 
 .project {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    cursor: pointer;
+  margin-bottom: 100px;
 }
 
 .project img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: 0.5s ease;
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 30px;
 }
 
-.project:hover img {
-    transform: scale(1.1);
+.project h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.project-info {
-    position: absolute;
-    bottom: 0;
-    padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-    width: 100%;
-}
-
-.project-info h3 {
-    margin-bottom: 10px;
-}
-
-.project-info p {
-    color: #d1d5db;
-    font-size: 0.9rem;
+.project p {
+  color: #aaa;
+  max-width: 700px;
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.skill {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid #374151;
-    font-size: 0.9rem;
-    color: #9ca3af;
+.skill-box {
+  border: 1px solid #222;
+  padding: 20px;
+  border-radius: 10px;
+  color: #aaa;
 }
 
 footer {
-    padding: 80px 10%;
-    text-align: center;
-    color: #6b7280;
-    font-size: 0.9rem;
+  padding: 80px 0;
+  border-top: 1px solid #222;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
 }
 
-/* Fade in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 1s ease;
+button {
+  margin-top: 40px;
+  padding: 14px 28px;
+  background: transparent;
+  border: 1px solid #4f9cff;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+button:hover {
+  background: #4f9cff;
+  color: black;
 }
+
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <nav>
-    <h2>NR</h2>
-    <div>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-    </div>
+  <h1>Nikesh Reddy</h1>
+  <div>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+  </div>
 </nav>
 
 <section class="hero">
-    <h1>Hi, I'm <span>Nikesh Reddy</span>.<br>Mechanical Design Engineer.</h1>
-    <p>I design high-performance mechanical systems using CAD, prototyping, and engineering analysis. My focus is precision, functionality, and real-world impact.</p>
-    <a href="#projects" class="button">View My Work</a>
+  <h2>I design <span>mechanical systems</span><br>with precision and purpose.</h2>
+  <p>
+    High school engineer focused on CAD modeling, mechanical assemblies,
+    and functional prototyping. I turn concepts into manufacturable systems.
+  </p>
+  <button onclick="document.getElementById('work').scrollIntoView()">View Projects</button>
 </section>
 
-<section id="projects" class="section fade-in">
-    <h2>Featured CAD Projects</h2>
+<section id="work" class="section">
+  <h3>Selected CAD Projects</h3>
 
-    <div class="projects">
-
-        <div class="project">
-            <img src="https://via.placeholder.com/800x600" alt="">
-            <div class="project-info">
-                <h3>Smart Hydration System</h3>
-                <p>Fully modeled mechanical hydration tracking backpack with modular assembly. Designed in SolidWorks.</p>
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="https://via.placeholder.com/800x600" alt="">
-            <div class="project-info">
-                <h3>Robotic Arm Assembly</h3>
-                <p>Multi-axis robotic arm with torque simulations and detailed part drawings. Designed in Fusion 360.</p>
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="https://via.placeholder.com/800x600" alt="">
-            <div class="project-info">
-                <h3>Adjustable Desk Mechanism</h3>
-                <p>Rack-and-pinion lifting mechanism with load analysis and manufacturing constraints.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="about" class="section fade-in">
-    <h2>About Me</h2>
-    <p style="max-width:700px; color:#9ca3af; line-height:1.7;">
-        I am a high school engineering student specializing in mechanical design and CAD development. 
-        I enjoy transforming complex problems into structured, efficient mechanical solutions. 
-        My work includes multi-part assemblies, 3D-printed prototypes, and functional engineering systems.
+  <div class="project">
+    <img src="https://via.placeholder.com/1200x700" alt="">
+    <h4>Modular Smart Hydration System</h4>
+    <p>
+      Designed a fully modular hydration backpack assembly with integrated
+      fluid tracking and detachable compartments. Modeled in SolidWorks
+      with 28 unique parts and full assembly constraints.
     </p>
+  </div>
+
+  <div class="project">
+    <img src="https://via.placeholder.com/1200x700" alt="">
+    <h4>Multi-Axis Robotic Arm</h4>
+    <p>
+      Engineered a 5-DOF robotic arm featuring gear-driven joints,
+      motor housings, and range-of-motion simulations.
+      Designed for 3D printing and educational robotics applications.
+    </p>
+  </div>
+
+  <div class="project">
+    <img src="https://via.placeholder.com/1200x700" alt="">
+    <h4>Precision Lift Desk Mechanism</h4>
+    <p>
+      Designed a rack-and-pinion lifting system optimized for load
+      distribution and mechanical stability. Included detailed
+      technical drawings and tolerancing.
+    </p>
+  </div>
+
 </section>
 
-<section id="skills" class="section fade-in">
-    <h2>Technical Skills</h2>
-    <div class="skills">
-        <div class="skill">SolidWorks</div>
-        <div class="skill">Fusion 360</div>
-        <div class="skill">3D Printing</div>
-        <div class="skill">Mechanical Assemblies</div>
-        <div class="skill">Engineering Drawings</div>
-        <div class="skill">Prototyping</div>
-        <div class="skill">Design for Manufacturing</div>
-        <div class="skill">Python (Basic)</div>
-    </div>
+<section id="about" class="section">
+  <h3>About</h3>
+  <p style="max-width:700px; color:#aaa;">
+    I am an aspiring mechanical engineer passionate about product design,
+    manufacturing, and functional mechanical systems. My work emphasizes
+    structure, efficiency, and real-world feasibility.
+  </p>
+</section>
+
+<section id="skills" class="section">
+  <h3>Technical Skills</h3>
+  <div class="skills">
+    <div class="skill-box">SolidWorks</div>
+    <div class="skill-box">Fusion 360</div>
+    <div class="skill-box">3D Printing</div>
+    <div class="skill-box">Mechanical Assemblies</div>
+    <div class="skill-box">Engineering Drawings</div>
+    <div class="skill-box">Design for Manufacturing</div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Nikesh Reddy — Engineering Portfolio
+  © 2026 Nikesh Reddy — Mechanical Engineering Portfolio
 </footer>
 
-<script>
-const elements = document.querySelectorAll(".fade-in");
-
-window.addEventListener("scroll", () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        if(position < window.innerHeight - 100){
-            el.classList.add("visible");
-        }
-    });
-});
-</script>
+</div>
 
 </body>
 </html>
