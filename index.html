@@ -5,69 +5,149 @@
 <title>Nikesh Reddy — Mechanical Engineer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #fff;
-        color: #111;
-        line-height: 1.65;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 1px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Intro */
+#intro {
+    margin-top: 40px;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #666;
+}
+
+/* Sections */
+section {
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Projects */
+.project {
+    margin-top: 50px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.project-desc {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    font-size: 0.85rem;
+    color: #888;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 40px 20px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    nav {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 40px;
-        font-weight: 400;
-    }
-    nav a {
-        text-decoration: none;
-        color: #444;
-        transition: color 0.3s;
-    }
-    nav a:hover {
-        color: #000;
-    }
-    h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
-    p.subtitle {
-        font-size: 1.2rem;
-        font-weight: 300;
-        color: #555;
-    }
-    section {
-        margin-top: 80px;
-    }
-    .project {
-        margin-top: 50px;
-    }
-    .project-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-    .project-desc {
-        color: #666;
-        font-size: 1rem;
-    }
-    footer {
-        margin-top: 90px;
-        font-size: 0.85rem;
-        color: #666;
-        text-align: center;
-    }
+}
+
 </style>
 </head>
 
@@ -82,15 +162,15 @@
 </nav>
 
 <section id="intro">
-    <h1>Hi, I'm Nikesh Reddy<span style="color:#000;"></span></h1>
-    <p class="subtitle">Mechanical engineer specializing in CAD design and functional prototyping.</p>
+    <h1>Hi, I'm Nikesh Reddy</h1>
+    <p class="subtitle">Mechanical engineer focused on CAD design and functional systems.</p>
 </section>
 
 <section id="about">
-    <h2>About Me</h2>
+    <h2>About</h2>
     <p>
-        I’m a passionate engineer focused on turning ideas into precise, manufacturable designs.  
-        My work spans mechanical systems, detailed CAD assemblies, and prototype realization.
+        I specialize in mechanical design, CAD assemblies, and prototype development.
+        My work focuses on turning ideas into manufacturable, efficient systems.
     </p>
 </section>
 
@@ -99,29 +179,49 @@
 
     <div class="project">
         <div class="project-title">Smart Hydration Backpack</div>
-        <p class="project-desc">Modular mechanical hydration system modeled with SolidWorks. Includes modular compartments and full assembly constraints.</p>
+        <p class="project-desc">Modular CAD assembly designed in SolidWorks with integrated fluid tracking.</p>
     </div>
 
     <div class="project">
         <div class="project-title">Adjustable Desk Mechanism</div>
-        <p class="project-desc">Rack-and-pinion lift system for ergonomic desks. Designed with manufacturability in mind.</p>
+        <p class="project-desc">Rack-and-pinion lifting system designed for mechanical stability.</p>
     </div>
 
     <div class="project">
         <div class="project-title">Robotic Arm Assembly</div>
-        <p class="project-desc">Multi-axis robotic arm with integrated motor housings and range of motion simulation.</p>
+        <p class="project-desc">Multi-axis robotic arm with motor integration and range simulations.</p>
     </div>
+
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
     <p>Email: nikeshreddy@example.com</p>
-    <p>GitHub: <a href="https://github.com/nikeshreddy">github.com/nikeshreddy</a></p>
+    <p>GitHub: github.com/nikeshreddy</p>
 </section>
 
-<footer>© 2026 Nikesh Reddy</footer>
+<footer>
+    © 2026 Nikesh Reddy
+</footer>
 
 </div>
+
+<script>
+/* Scroll Reveal Animation */
+const sections = document.querySelectorAll("section");
+
+const reveal = () => {
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            section.classList.add("visible");
+        }
+    });
+};
+
+window.addEventListener("scroll", reveal);
+reveal();
+</script>
 
 </body>
 </html>
