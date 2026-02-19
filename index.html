@@ -2,145 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Nikesh Reddy — Mechanical Engineer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nikesh Reddy | Mechanical Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Space Grotesk', sans-serif;
-  background: #0c0c0c;
-  color: #f5f5f5;
-  line-height: 1.6;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 0;
-}
-
-nav h1 {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-nav a {
-  text-decoration: none;
-  color: #aaa;
-  margin-left: 30px;
-  font-size: 0.9rem;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: white;
-}
-
-.hero {
-  padding: 120px 0;
-  max-width: 900px;
-}
-
-.hero h2 {
-  font-size: 4.5rem;
-  font-weight: 700;
-  line-height: 1.05;
-  margin-bottom: 30px;
-}
-
-.hero span {
-  color: #4f9cff;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #bbb;
-  max-width: 600px;
-}
-
-.section {
-  padding: 140px 0;
-  border-top: 1px solid #222;
-}
-
-.section h3 {
-  font-size: 2rem;
-  margin-bottom: 60px;
-}
-
-.project {
-  margin-bottom: 100px;
-}
-
-.project img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 30px;
-}
-
-.project h4 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.project p {
-  color: #aaa;
-  max-width: 700px;
-}
-
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.skill-box {
-  border: 1px solid #222;
-  padding: 20px;
-  border-radius: 10px;
-  color: #aaa;
-}
-
-footer {
-  padding: 80px 0;
-  border-top: 1px solid #222;
-  text-align: center;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-button {
-  margin-top: 40px;
-  padding: 14px 28px;
-  background: transparent;
-  border: 1px solid #4f9cff;
-  color: white;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #4f9cff;
-  color: black;
-}
-
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #fff;
+        color: #111;
+        line-height: 1.65;
+    }
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+        font-weight: 400;
+    }
+    nav a {
+        text-decoration: none;
+        color: #444;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #000;
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    p.subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #555;
+    }
+    section {
+        margin-top: 80px;
+    }
+    .project {
+        margin-top: 50px;
+    }
+    .project-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .project-desc {
+        color: #666;
+        font-size: 1rem;
+    }
+    footer {
+        margin-top: 90px;
+        font-size: 0.85rem;
+        color: #666;
+        text-align: center;
+    }
 </style>
 </head>
 
@@ -149,82 +76,50 @@ button:hover {
 <div class="container">
 
 <nav>
-  <h1>Nikesh Reddy</h1>
-  <div>
-    <a href="#work">Work</a>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-  </div>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<section class="hero">
-  <h2>I design <span>mechanical systems</span><br>with precision and purpose.</h2>
-  <p>
-    High school engineer focused on CAD modeling, mechanical assemblies,
-    and functional prototyping. I turn concepts into manufacturable systems.
-  </p>
-  <button onclick="document.getElementById('work').scrollIntoView()">View Projects</button>
+<section id="intro">
+    <h1>Hi, I'm Nikesh Reddy<span style="color:#000;"></span></h1>
+    <p class="subtitle">Mechanical engineer specializing in CAD design and functional prototyping.</p>
 </section>
 
-<section id="work" class="section">
-  <h3>Selected CAD Projects</h3>
-
-  <div class="project">
-    <img src="https://via.placeholder.com/1200x700" alt="">
-    <h4>Modular Smart Hydration System</h4>
+<section id="about">
+    <h2>About Me</h2>
     <p>
-      Designed a fully modular hydration backpack assembly with integrated
-      fluid tracking and detachable compartments. Modeled in SolidWorks
-      with 28 unique parts and full assembly constraints.
+        I’m a passionate engineer focused on turning ideas into precise, manufacturable designs.  
+        My work spans mechanical systems, detailed CAD assemblies, and prototype realization.
     </p>
-  </div>
-
-  <div class="project">
-    <img src="https://via.placeholder.com/1200x700" alt="">
-    <h4>Multi-Axis Robotic Arm</h4>
-    <p>
-      Engineered a 5-DOF robotic arm featuring gear-driven joints,
-      motor housings, and range-of-motion simulations.
-      Designed for 3D printing and educational robotics applications.
-    </p>
-  </div>
-
-  <div class="project">
-    <img src="https://via.placeholder.com/1200x700" alt="">
-    <h4>Precision Lift Desk Mechanism</h4>
-    <p>
-      Designed a rack-and-pinion lifting system optimized for load
-      distribution and mechanical stability. Included detailed
-      technical drawings and tolerancing.
-    </p>
-  </div>
-
 </section>
 
-<section id="about" class="section">
-  <h3>About</h3>
-  <p style="max-width:700px; color:#aaa;">
-    I am an aspiring mechanical engineer passionate about product design,
-    manufacturing, and functional mechanical systems. My work emphasizes
-    structure, efficiency, and real-world feasibility.
-  </p>
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <div class="project-title">Smart Hydration Backpack</div>
+        <p class="project-desc">Modular mechanical hydration system modeled with SolidWorks. Includes modular compartments and full assembly constraints.</p>
+    </div>
+
+    <div class="project">
+        <div class="project-title">Adjustable Desk Mechanism</div>
+        <p class="project-desc">Rack-and-pinion lift system for ergonomic desks. Designed with manufacturability in mind.</p>
+    </div>
+
+    <div class="project">
+        <div class="project-title">Robotic Arm Assembly</div>
+        <p class="project-desc">Multi-axis robotic arm with integrated motor housings and range of motion simulation.</p>
+    </div>
 </section>
 
-<section id="skills" class="section">
-  <h3>Technical Skills</h3>
-  <div class="skills">
-    <div class="skill-box">SolidWorks</div>
-    <div class="skill-box">Fusion 360</div>
-    <div class="skill-box">3D Printing</div>
-    <div class="skill-box">Mechanical Assemblies</div>
-    <div class="skill-box">Engineering Drawings</div>
-    <div class="skill-box">Design for Manufacturing</div>
-  </div>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: nikeshreddy@example.com</p>
+    <p>GitHub: <a href="https://github.com/nikeshreddy">github.com/nikeshreddy</a></p>
 </section>
 
-<footer>
-  © 2026 Nikesh Reddy — Mechanical Engineering Portfolio
-</footer>
+<footer>© 2026 Nikesh Reddy</footer>
 
 </div>
 
